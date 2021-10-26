@@ -4,7 +4,7 @@ export default function DigitalSignUpBlock() {
   return (
     <div className="text-center">
       <p className="text-white text-lg px-6 pt-6 font-light">
-        {`For all those who couldn't be here at the SEMA Show, we're bringing the show to you. If you liked the video that brought you here, fill out the survey below to get on our list for the next in the series of Scotto's Corvette Stingray.`}
+        {`For all those who couldn't be here at the SEMA Show, we're bringing the show to you. If you liked the video that brought you here, fill out the survey below to get on our list for behind-the-scenes content of the Formula Supra.`}
       </p>
       <Link
         to="reflexForm"

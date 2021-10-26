@@ -4,9 +4,7 @@ export default function SignUpBlock() {
   return (
     <div className="text-center">
       <p className="text-white text-lg px-6 pt-6 font-light">
-        {`Starting here at SEMA, a limited few are invited to be the first to go
-        behind-the-scenes of exclusive Mobil 1 builds like Scotto's Corvette
-        Stingray.`}
+        {`Starting here at SEMA, a limited few are invited to be the first to go behind-the-scenes of exclusive Mobil 1 builds like the Formula Supra.`}
       </p>
       <Link
         to="reflexForm"

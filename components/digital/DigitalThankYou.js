@@ -4,10 +4,11 @@ export default function DigitalThankYou() {
   return (
     <div className="text-white text-center px-4 font-light mt-6">
       <Image
-        src="/corvette-confirmation-headline.png"
+        src="/toyota-confirmation-headline.png"
         width="1170px"
-        height="365px"
+        height="433px"
         priority
+        alt="You're In"
       />
       <p className="my-6">
         Even though we missed you in-person, we wanted to leave you with a
@@ -17,7 +18,7 @@ export default function DigitalThankYou() {
       </p>
       <p>
         Thanks for being unconventional, and stay tuned for more exclusive
-        content from us and our partners like Hoonigan in the near future.
+        content from us and our partners like Ryan Tuerck in the near future.
       </p>
     </div>
   );
