@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Corvette - Unconventionally Driven</title>
+        <title>Toyota - Unconventionally Driven</title>
       </Head>
       {playVideo && <PlayVideo handleDonePlaying={handleDonePlaying} />}
       <VideoBackground>
