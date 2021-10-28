@@ -8,7 +8,7 @@ export default function Wallpapers() {
       </Head>
       <h1 className="text-gray-50 mb-8 text-4xl">Download your wallpaper</h1>
       <img
-        src="/Physical-2021-SEMA-Mobile-Wallpaper-TOYOTA.jpg"
+        src="/2021-SEMA-Mobile-Wallpaper-TOYOTA.jpg"
         alt="Toyota Wallpaper"
       />
     </div>
