@@ -1,12 +1,13 @@
 import Image from "next/image";
+import confImage from "../public/toyota-confirmation-headline.png";
 
 export default function ThankYouContent() {
   return (
     <div className="text-white text-center px-4 font-light mt-6">
       <Image
-        src="/toyota-confirmation-headline.png"
-        width="1170px"
-        height="433px"
+        src={confImage}
+        placeholder="blur"
+        loading="eager"
         priority
         alt="You're In on top of Toyota Sketch"
       />

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import phoneMockup from "../public/wallpaper-phone-toyota.png";
 
 export default function WallpaperDownload({ wallpaperLink }) {
   return (
@@ -7,9 +8,9 @@ export default function WallpaperDownload({ wallpaperLink }) {
       <hr className="text-white my-16 w-1/2 mx-auto" />
       <h2 className="text-white mb-6 text-4xl">Download the Wallpaper</h2>
       <Image
-        src="/wallpaper-phone-toyota.png"
-        width="1170px"
-        height="1310px"
+        src={phoneMockup}
+        placeholder="blur"
+        priority
         alt="Phone with toyota wallpaper"
       />
       <Link href={wallpaperLink}>
