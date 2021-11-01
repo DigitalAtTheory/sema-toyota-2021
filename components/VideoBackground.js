@@ -7,7 +7,7 @@ export default function VideoBackground({ videoPath, children }) {
       {children}
       <div className="absolute h-full w-full top-0 z-0 ">
         <video
-          className="relative h-full w-full object-cover z-0"
+          className="backgroundVideo relative h-full w-full object-cover z-0"
           src={videoPath}
           autoPlay
           muted

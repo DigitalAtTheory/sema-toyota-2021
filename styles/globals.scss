@@ -20,3 +20,9 @@ body {
   font-family: "EM Print", sans-serif;
   background: black;
 }
+
+.backgroundVideo {
+  @media (max-width: 600px) {
+    object-position: -600px;
+  }
+}
