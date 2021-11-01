@@ -27,7 +27,7 @@ export default function Home() {
         <title>Toyota - Unconventionally Driven</title>
       </Head>
       {playVideo && <PlayVideo handleDonePlaying={handleDonePlaying} />}
-      <VideoBackground videoPath="/SEMA_SCOTTO_C8_02.mp4">
+      <VideoBackground videoPath="/TUERCK_FS_M1_SEMA_VER1_1.mp4">
         <Lockup />
         <HeroContent handlePlayVideo={handlePlayVideo} />
       </VideoBackground>
