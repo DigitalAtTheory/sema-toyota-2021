@@ -60,7 +60,6 @@ export default function Form() {
   };
 
   const handleOptin = (e) => {
-    setLoading(true);
     switch (e.target.id) {
       case "privacyPolicy":
         privacyPolicy ? setPrivacyPolicy(false) : setPrivacyPolicy(true);
@@ -77,6 +76,8 @@ export default function Form() {
   };
 
   const handleSubmit = async () => {
+    setLoading(true);
+
     const formData = {
       entry_id: uuidv4(),
       gender,
