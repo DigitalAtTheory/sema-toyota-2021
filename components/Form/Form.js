@@ -103,37 +103,45 @@ export default function Form() {
     if (!formData.gender) {
       setError(true);
       setErrorMessage("Please choose a gender option.");
+      setLoading(false);
     } else if (!formData.age) {
       setError(true);
       setErrorMessage("Please enter your age.");
+      setLoading(false);
     } else if (!formData.email) {
       setError(true);
       setErrorMessage("Please enter your email.");
+      setLoading(false);
     } else if (!formData.zip_code) {
       setError(true);
       setErrorMessage("Please enter your zip code.");
+      setLoading(false);
     } else if (!formData.oil_change) {
       setError(true);
       setErrorMessage("Please tell use how you change your oil.");
+      setLoading(false);
     } else if (!formData.personal_car) {
       setError(true);
       setErrorMessage("Please tell us the make of your primary car.");
+      setLoading(false);
     } else {
       if (error) setError(false);
 
-      await axios.post("/api/physical", formData).catch((err) => {
-        console.error(err.message);
-        setError(true);
-        setErrorMessage(
-          "Something went wrong. Try again. Make sure you are using an actual email."
-        );
-      });
-      setButtonText("Thank You!");
-      setLoading(false);
-    }
-
-    if (!error) {
-      router.push("/thank-you");
+      await axios
+        .post("/api/physical", formData)
+        .then((res) => {
+          setButtonText("Thank You!");
+          setLoading(false);
+          router.push("/thank-you");
+        })
+        .catch((err) => {
+          console.error(err.message);
+          setError(true);
+          setErrorMessage(
+            "Something went wrong. Try again. Make sure you are using an actual email."
+          );
+          setLoading(false);
+        });
     }
 
     console.log(formData);
@@ -141,14 +149,18 @@ export default function Form() {
 
   return (
     <div id="reflexForm" className="px-4 text-center">
-      <h2 className="text-white text-2xl text-center">Sign up, stay tuned</h2>
-      <Gender handleChooseRadial={handleChooseRadial} />
+      <h2 className="text-white text-2xl text-center mb-4">
+        Sign up, stay tuned
+      </h2>
       <Info
         age={age}
         email={email}
         zipCode={zipCode}
         handleInput={handleInput}
       />
+      <Gender handleChooseRadial={handleChooseRadial} />
+      <FirstQuestion handleChooseRadial={handleChooseRadial} />
+      <SecondQuestion handleChooseRadial={handleChooseRadial} />
       <OptIn
         privacyPolicy={privacyPolicy}
         manufacturer={manufacturer}
@@ -157,8 +169,6 @@ export default function Form() {
         raceService={raceService}
         handleOptin={handleOptin}
       />
-      <FirstQuestion handleChooseRadial={handleChooseRadial} />
-      <SecondQuestion handleChooseRadial={handleChooseRadial} />
       <button
         onClick={handleSubmit}
         className="bg-reflex-600 text-white w-3/4 lg:w-1/2 mx-auto my-10 py-3 rounded shadow-xl"
